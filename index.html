@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autenticación</title>
     <link rel="stylesheet" href="estilos.css">
 
     <!--Cargar el nucleo de Firebase JS SDK-->
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
 
     <!--Agregar el manejo de autenticacion -->
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
 
     <script src="js/init.js"></script>
 
@@ -38,7 +37,7 @@
         
         const provider = new firebase.auth.GoogleAuthProvider();
 
-        provider.setCustomParameters({ prompt:"select_account" });
+        provider.setCustomParameters({ prompt: "select_account" });
 
         auth.onAuthStateChanged(
             usuarioAuth => {
